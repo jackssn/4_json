@@ -10,10 +10,14 @@ def load_data(filepath):
 
 
 def pretty_print_json(data):
-    pprint(data)
+    pprint(data)    # pprint не умеет выводить данные в формате json
+                    # почему? у меня работает
 
 
 if __name__ == '__main__':
     filepath = input('Type full path to json-file:\n')
     data = load_data(filepath)
-    pretty_print_json(data)
+    if data:
+        pretty_print_json(data)
+    else:
+        print('File not found.')
