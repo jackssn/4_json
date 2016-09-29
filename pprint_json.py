@@ -1,6 +1,6 @@
 import json
 import os
-from pprint import pprint
+import pprint
 
 def load_data(filepath):
     if not os.path.exists(filepath):
@@ -10,8 +10,7 @@ def load_data(filepath):
 
 
 def pretty_print_json(data):
-    pprint(data)    # pprint не умеет выводить данные в формате json
-                    # почему? у меня работает
+    print(json.dumps(data, indent=4, sort_keys=True))
 
 
 if __name__ == '__main__':
