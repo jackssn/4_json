@@ -1,6 +1,5 @@
 import json
 import os
-import pprint
 
 def load_data(filepath):
     if not os.path.exists(filepath):
